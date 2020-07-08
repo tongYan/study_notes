@@ -405,7 +405,7 @@ recover()只有包含在defer()执行函数内部才能生效
 
 ## 空接口
 
-默认值为nil,可被赋值成任何类型
+默认值为nil(类型和值部分都是nil),可被赋值成任何类型
 
 ```go
 m := make(map[string]interface{},4)
@@ -415,6 +415,29 @@ m["string"] = "abc"
 m["slice"] = []float64{2.17,3.14}
 fmt.Printf("%T  %v",m,m)
 ```
+
+
+
+![image-20200616110357275](../static/images/image-20200616110357275.png)
+
+
+
+包涵nil指针的接口不是nil接口
+
+```go
+var w io.Writer
+fmt.Printf("%T %v\n",w,w==nil)    // nil true
+w2 = new(bytes.Buffer)
+fmt.Printf("%T %v\n",w2,w2==nil)    // *bytes.Buffer false
+```
+
+如上图 w {type:nil, value:nil},  w2{type:*bytes.Buffer,value:nil}
+
+
+
+
+
+
 
 ## 最佳实践
 
