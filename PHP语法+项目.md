@@ -625,8 +625,8 @@ composer require topthink/think-captcha
 
 ```php
 return [
-    'access_key_id' => 'LTAI4GAf6oshdZPQZwRuGLXw',
-    'access_secret' => 'GbFYB02nFvkgjzL5g6WBFwFnlqrRo3',
+    'access_key_id' => 'access_key_id',
+    'access_secret' => 'access_secret',
     'region_id' => 'cn-hangzhou',
     'host' => 'dysmsapi.aliyuncs.com',
     'sign_name' => '求知',
@@ -635,7 +635,7 @@ return [
 
 'redis' => [
             'type'   => 'redis',
-            'host'       => '111.229.91.208',
+            'host'       => '111.229.91.123',
             'port'       => 6379,
             'password'   => 'redis',
         ]
